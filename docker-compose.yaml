@@ -1,7 +1,7 @@
 version: '3.0'
 services:
   proxy_server:
-    image: Markovvn1/alpine-squid
+    image: markovvn1/alpine-squid
     container_name: "docker_squid"
     restart: always
     environment:

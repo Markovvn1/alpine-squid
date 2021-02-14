@@ -13,7 +13,7 @@ Or build from source
 ```
 git clone https://github.com/Markovvn1/alpine-squid.git
 cd alpine-squid
-docker build -t Markovvn1/alpine-squid .
+docker build -t markovvn1/alpine-squid .
 ```
 
 ### Run
