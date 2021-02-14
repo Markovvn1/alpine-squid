@@ -1,0 +1,17 @@
+version: '3.0'
+services:
+  proxy_server:
+    image: Markovvn1/alpine-squid
+    container_name: "docker_squid"
+    restart: always
+    environment:
+      WEBADMIN: admin
+      PASSWORD: 123456
+    ports:
+      - 3128:3128
+      - 3129:3129
+    volumes:
+      #- ./data/config:/etc/squid
+      #- ./data/cache:/var/cache/squid
+      #- /etc/hosts:/etc/hosts:ro
+      - /etc/localtime:/etc/localtime:ro
