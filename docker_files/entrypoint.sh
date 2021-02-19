@@ -32,6 +32,8 @@ else
 	htpasswd -bcB ${CONFIG_DIR}/.htpasswd ${LOGIN} ${PASSWORD}
 fi;
 
+# Remove files from previous run
+[ -f /var/run/squid.pid ] && echo "removing /var/run/squid.pid" && rm /var/run/squid.pid;
 
 # Start squid
 /usr/sbin/squid -NYCd 5 -f /etc/squid/squid.conf
